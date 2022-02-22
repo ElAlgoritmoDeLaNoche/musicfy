@@ -9,14 +9,14 @@ import './TopBar.scss'
 
 function TopBar(props) {
 
-  const { user } = props
+  const { user, history } = props
 
   const goback = () => {
-    console.log("Ir atras");
+    history.goBack()
   }
 
   const logout = () => {
-    console.log("Cerrar Sesión");
+    firebase.auth().signOut()
   }
 
   return (
